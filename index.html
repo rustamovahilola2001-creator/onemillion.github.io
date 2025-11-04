@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uz-latin" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bir Million Promterlar</title>
+  <link rel="icon" href="omplogo.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- PNG → PDF uchun kutubxonalar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container-xl header-inner">
+      <a href="/" class="logo-link">
+        <img src="./images/logo/dark-logo.svg" alt="Logo" class="logo" />
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="nav-desktop">
+        <ul class="nav-list">
+          <li><a href="/#courseSummary" class="nav-link">Kurs haqida</a></li>
+          <li><a href="/#courseOverview" class="nav-link">Kurslar mazmuni</a></li>
+          <li><a href="/#learningOutcomes" class="nav-link">Kurs natijalari</a></li>
+          <li><a href="/courses" class="nav-link">Modullar</a></li>
+          <li>
+            <div class="lang-switcher">
+              <button class="lang-btn">
+                <img src="./icons/uz-icon.svg" alt="UZ" class="lang-icon" />
+                <span>Uz</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-content">
+      <div class="mobile-header">
+        <img src="./images/logo/dark-logo.svg" alt="Logo" class="mobile-logo" />
+        <button class="close-btn" aria-label="Yopish">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#0047ba">
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-body">
+        <a href="/auth/login" class="login-btn">Tizimga kirish</a>
+        <nav class="mobile-nav">
+          <a href="/#courseSummary">Kurs haqida</a>
+          <a href="/#courseOverview">Kurslar mazmuni</a>
+          <a href="/#learningOutcomes">Kurs natijalari</a>
+          <a href="/courses">Modullar</a>
+        </nav>
+        <hr class="divider" />
+        <div class="mobile-lang">
+          <button class="lang-mobile active">Uzbek</button>
+          <button class="lang-mobile">English</button>
+          <button class="lang-mobile">Русский</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sertifikat bo'limi -->
+  <section class="certificate-section">
+    <div class="container-xl">
+      <div class="certificate-card">
+        <div class="progress-container">
+          <div class="progress-circle">
+            <svg class="progress-svg">
+              <circle class="bg-circle" cx="105" cy="105" r="75"></circle>
+              <circle class="progress-ring" cx="105" cy="105" r="75"></circle>
+            </svg>
+            <div class="progress-text">
+              <h3>0<span>%</span></h3>
+            </div>
+          </div>
+        </div>
+       
+        <!-- PNG sertifikatni ko'rsatish uchun div (boshida yashirin) -->
+        <div id="certificate-display" style="display: none; margin-top: 1rem; width: 100%;">
+          <img id="cert-img" src="" alt="Sertifikat" />
+        </div>
+      </div>
+      <div class="certificate-actions">
+        <button id="download-btn" class="action-btn" disabled>Yuklab olish</button>
+        <button id="share-btn" class="action-btn">Ulashish</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-xl footer-inner">
+      <div class="footer-left">
+        <a href="#" class="privacy-link">Maxfiylik siyosati</a>
+        <span class="divider-desktop">|</span>
+        <p class="copyright">Barcha huquqlar himoyalangan</p>
+      </div>
+      <a href="https://uzinfocom.uz/" target="_blank" rel="noopener">
+        <img src="./images/logo/logo_uzinfocom.svg" alt="Uzinfocom" class="uzinfocom-logo" />
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
